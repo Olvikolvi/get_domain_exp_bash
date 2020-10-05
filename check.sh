@@ -12,8 +12,8 @@ do
   expf=$(date -j -f '%d.%m.%Y' "${exp}" '+%d.%m.%Y' 2> /dev/null)
   if [ -z "$expf" ]
   then
-   expf=$(date -j -f '%Y-%m-%d' "2020-10-06" '+%d.%m.%Y' 2> /dev/null)
+    expf=$(date -j -f '%Y-%m-%d' "${exp}" '+%d.%m.%Y')
   fi
-  echo $domain 	 $expf
+  echo -e $domain "\t" $expf
 done
 
